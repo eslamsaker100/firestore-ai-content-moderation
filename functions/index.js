@@ -12,10 +12,10 @@ import { getEventarc } from "firebase-admin/eventarc";
 import { getExtensions } from "firebase-admin/extensions";
 import { getFunctions } from "firebase-admin/functions";
 
-import { moderateContent } from "./providers/index.js";
+import { moderateContent as moderateText } from "./providers/index.js";
 
 // Extension version for idempotency guard
-const EXTENSION_VERSION = "0.0.1";
+const EXTENSION_VERSION = "0.1.0";
 
 // Initialize Firebase Admin
 const app = initializeApp();
@@ -179,7 +179,7 @@ export const moderateContent_fn = firestore
     try {
       // Run moderation
       logger.info(`Evaluating content with ${config.provider} provider`);
-      const result = await moderateContent(text, config);
+      const result = await moderateText(text, config);
 
       logger.info(`Moderation result: flagged=${result.flagged}, score=${result.score}`);
 
@@ -286,7 +286,7 @@ export const backfillModeration = tasks.taskQueue().onDispatch(async (data) => {
     }
 
     try {
-      const result = await moderateContent(text, config);
+      const result = await moderateText(text, config);
       await applyModerationAction(doc.ref, result);
       processed++;
       logger.info(`Processed document: ${doc.ref.path}`);
