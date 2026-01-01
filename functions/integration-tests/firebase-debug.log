@@ -227,3 +227,39 @@ INFO: Detected non-HTTP/2 connection.
 [debug] [2026-01-01T18:20:58.470Z] Jan 01, 2026 8:20:58 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
 INFO: Detected HTTP/2 connection.
  {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 01, 2026 8:20:58 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected HTTP/2 connection.\r\n"}}
+[debug] [2026-01-01T18:20:59.121Z] <<< [apiv2][status] PUT http://127.0.0.1:8080/emulator/v1/projects/demo-test/triggers/us-central1-ext-firestore-ai-content-moderation-moderateContent-0 200
+[debug] [2026-01-01T18:20:59.121Z] <<< [apiv2][body] PUT http://127.0.0.1:8080/emulator/v1/projects/demo-test/triggers/us-central1-ext-firestore-ai-content-moderation-moderateContent-0 {}
+[info] +  functions[us-central1-ext-firestore-ai-content-moderation-moderateContent]: firestore function initialized. {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mfirestore\u001b[22m function initialized."}}
+[warn] !  Unsupported function type on ext-firestore-ai-content-moderation-backfillModeration. Expected either an httpsTrigger, eventTrigger, or blockingTrigger. {"metadata":{"emulator":{"name":"functions"},"message":"Unsupported function type on ext-firestore-ai-content-moderation-backfillModeration. Expected either an httpsTrigger, eventTrigger, or blockingTrigger."}}
+[info] i  functions[us-central1-ext-firestore-ai-content-moderation-backfillModeration]: function ignored because the unknown emulator does not exist or is not running. {"metadata":{"emulator":{"name":"functions"},"message":"function ignored because the unknown emulator does not exist or is not running."}}
+[debug] [2026-01-01T18:20:59.129Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────┬────────────────┬──────────────────────────────────┐
+│ Emulator   │ Host:Port      │ View in Emulator UI              │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Functions  │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions  │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Firestore  │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore  │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Extensions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/extensions │
+└────────────┴────────────────┴──────────────────────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500, 9150
+┌─────────────────────────────────┬─────────────────┬──────────────────────────────────────────────────────────────────┐
+│ Extension Instance Name         │ Extension Ref   │ View in Emulator UI                                              │
+├─────────────────────────────────┼─────────────────┼──────────────────────────────────────────────────────────────────┤
+│ firestore-ai-content-moderation │ Local Extension │ http://127.0.0.1:4000/extensions/firestore-ai-content-moderation │
+└─────────────────────────────────┴─────────────────┴──────────────────────────────────────────────────────────────────┘
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2026-01-01T18:21:18.680Z] Jan 01, 2026 8:21:18 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 01, 2026 8:21:18 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\r\nINFO: Connected to new websocket client\r\n"}}
+[debug] [2026-01-01T18:21:57.318Z] Jan 01, 2026 8:21:57 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 01, 2026 8:21:57 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\r\nINFO: Websocket client disconnected\r\n"}}
